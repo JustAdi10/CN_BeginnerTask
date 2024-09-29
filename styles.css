@@ -1,0 +1,110 @@
+*{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    display:grid;
+    height:100vh;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 3fr 1fr 0.8fr ;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "footer footer footer footer";
+    /* grid-gap: 0.1rem; */
+}
+
+nav {
+    background: #606c38;
+    grid-area: nav;
+    font-family: calibri;
+    padding-left: 15px;
+    padding-right: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+
+li a{
+    color:white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+button{
+    background-color: #dda15e;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px
+}
+
+button a{
+    color:white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+main {
+    background: #fefae0;
+    grid-area: main;
+    background-image:url(Resources/wallpapersden.com_coffee-relax-minimalist_1920x1080.jpg);
+    background-size:cover;
+    background-position: center;
+}
+
+#sidebar {
+    background-color: #dda15e;
+    grid-area: sidebar;
+}
+
+#content1{
+    background: #bc6c25;
+    grid-area: content1;
+}
+
+#content2{
+    background: #dda15e;
+    grid-area: content2;
+}
+
+#content3{
+    background: #bc6c25;
+    grid-area:content3;
+}
+
+
+footer {
+    background: #283618;
+    grid-area:footer;
+}
+
+@media only screen and (max-width: 550px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "nav"
+        "sidebar"
+        "content1"
+        "content2"
+        "content3"
+        "footer";
+    }
+}
